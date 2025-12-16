@@ -1,28 +1,38 @@
 {
-  "apprenants" : [
-    {
-      "id" : 1,
-      "nom" : "Doe",
-      "prenom" : "John",
-      "ville" : "Rennes",
-      "avatar" : "image.png",
-      "anecdotes" : "",
-      "coordonnees": {
-        "latitude" : "48.0389236",
-        "longitude" : "-1.6923804"
-      }
-    },
-    {
-      "id" : 2,
-      "nom" : "Doe",
-      "prenom" : "Jane",
-      "ville": "Nantes",
-      "avatar" : "",
-      "anecdotes" : "",
-      "coordonnees": {
-        "latitude" : "47.2258527",
-        "longitude" : "-1.6178441"
-      }
-    }
-  ]
+	"apprenants": [
+		{
+			"id": 1,
+			"lastname": "GUITTARD",
+			"name": "Jason",
+			"city": "Dijon",
+			"story": [
+				"Joue en pré-nationnal au Volley-ball",
+				"Manager d'équipes e-sport sur le jeu VALORANT"
+			],
+			"avatar": "assets/Images/Avatar/jasonGUITTARD.png",
+			"coord": {
+				"latitude": 47.31040954589844,
+				"longitude": 5.047903060913086 
+			}
+		},
+		{
+			"id": 2,
+			"lastname": "VERDY",
+			"name": "Bryan",
+			"city": "Epinal",
+			"story": [
+				"A obetenu son permis il y'a 2 ans"
+			]
+		},
+		{
+			"id": 3,
+			"lastname": "GUITTARD",
+			"name": "Donovan",
+			"city": "Epinal",
+			"story": [
+				"Rêve de devenir commercial automobile"
+			],
+			"avatar": "assets/Images/Avatar/avatar.png"
+		}
+	]
 }
