@@ -1,0 +1,10 @@
+.table-height {
+	height: 70vh;
+	overflow-y: scroll;
+}
+
+@media screen and (max-width: 576px) {
+	.display-none-custom {
+		display: none;
+	}
+}
