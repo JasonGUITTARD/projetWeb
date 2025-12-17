@@ -12,7 +12,6 @@ function init() {
 	let theme = localStorage.getItem("theme")
 
 	if(display) {
-		console.log(display)
 		document.getElementById(display).checked = true
 		if(display == "table") {
 			fetch('promo.json').then(response => response.json()).then(data => updateDisplayTable(data.apprenants))
