@@ -15,22 +15,22 @@
 		<header>
 			<nav class="navbar navbar-expand-lg">
 				<div class="container-fluid">
-					<a href="navbar-brand"><img src="assets/Images/logo.webp" alt="Logo de l'école ENI" class="img-fluid display-none-custom"></a>
+					<a class="navbar-brand col-sm-auto col-2"><img src="assets/Images/logo.webp" alt="Logo de l'école ENI" class="img-fluid"></a>
 					<h1 class="text-center col-7">Promo EDWM2511FT</h1>
 					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>	
 					<div class="collapse navbar-collapse" id="navbarToggler">
 						<ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
 							<li class="nav-item">
-								<a href="index.html" class="btn btn-dark btn-lg" role="button">Acceuil</a>
+								<a href="index.html" class="btn btn-primary btn-lg" role="button">Acceuil</a>
 							</li>
 							<li class="nav-item">
-								<a href="preferences.html" class="btn btn-dark btn-lg" role="button">Préférences</a>
+								<a href="preferences.html" class="btn btn-primary btn-lg" role="button">Préférences</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="btn btn-dark btn-lg" role="button">Carte</a>
+								<a href="#" class="btn btn-primary btn-lg" role="button">Carte</a>
 							</li>
 							<li class="nav-item">
-								<a href="informations.html" class="btn btn-dark btn-lg" role="button">Informations</a>
+								<a href="#" class="btn btn-primary btn-lg" role="button">Informations</a>
 							</li>
 						</ul>
 					</div>
@@ -38,12 +38,14 @@
 			</nav>
 		</header>
 		<main class="mt-4 row">
-			<div class="text-end justify-content-end pe-5 mb-4">
-				<label class="me-4">Type d'affichage</label>
-				<input type="radio" name="display" id="table" class="form-check-input" checked>
-				<label for="table" class="pe-2 form-check-label">Liste</label>
-				<input type="radio" name="display" id="grid" class="form-check-input">
-				<label for="grid" class="form-check-label">Cartes</label>
+			<div class="pe-5 mb-4">
+				<div class="col-11 text-end">
+					<label class="me-4">Type d'affichage</label>
+					<input type="radio" name="display" id="table" class="form-check-input" checked>
+					<label for="table" class="pe-2 form-check-label">Liste</label>
+					<input type="radio" name="display" id="grid" class="form-check-input">
+					<label for="grid" class="form-check-label">Cartes</label>
+				</div>
 			</div>
 			<div class="col-sm-7" id="tableDisplay">
 				<h3>Liste des apprenants</h3>
@@ -63,21 +65,21 @@
 									<td scope="row" lastname></td>
 									<td name></td>
 									<td city></td>
-									<td><a href="#" class="btn btn-link" role="button">Détail</a></td>
+									<td><a href="#" class="btn btn-link" role="button">Détails</a></td>
 								</tr>
 							</template>
 						</tbody>
 					</table>
 				</div>
 			</div>
-			<div class="row row-cols-sm-6 gap-5" id="gridDisplay">
+			<div class="row row-cols-lg-6 row-cols-sm-4 row-cols-2 gap-5 justify-content-center" id="gridDisplay">
 				<template id="templateGridApprenants">
-					<div class="card col">
+					<div class="card col-10">
 						<img src="assets/Images/Avatar/avatar.webp" alt="" class="card-img-top rounded-circle img-fluid">
-						<div class="card-body">
+						<div class="card-body pb-3 text-center">
 							<h5 class="card-title"></h5>
-							<p class="card-text"></p>
-							<a href="" class="btn btn-primary">Détails</a>
+							<p class="card-text text-wrap"></p>
+							<a href="" class="btn btn-primary ">Détails</a>
 						</div>
 					</div>
 				</template>
