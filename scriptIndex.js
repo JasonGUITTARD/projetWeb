@@ -9,8 +9,10 @@ function init() {
 	document.getElementById("grid").addEventListener('change', updateDisplayGrid)
 
 	let display = localStorage.getItem("display")
+	let theme = localStorage.getItem("theme")
 
 	if(display) {
+		console.log(display)
 		document.getElementById(display).checked = true
 		if(display == "table") {
 			fetch('promo.json').then(response => response.json()).then(data => updateDisplayTable(data.apprenants))
@@ -18,6 +20,8 @@ function init() {
 			fetch('promo.json').then(response => response.json()).then(data => updateDisplayGrid(data.apprenants))
 		}
 	}
+
+	updateTheme(theme)
 	
 }
 
@@ -72,13 +76,14 @@ function updateDisplayTable() {
 	resetDisplay(gridDiv)
 }
 
-apprenantTable.lastElementChild
-
 function resetDisplay(element) {
-	console.log(element.children)
 	let childrenLength = element.children.length;
 	while(childrenLength > 1) {
 		element.removeChild(element.lastElementChild)
 		childrenLength = element.children.length;
 	}
+}
+
+function updateTheme(theme) {
+	document.body.setAttribute("data-bs-theme", theme)
 }

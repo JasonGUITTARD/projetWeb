@@ -14,9 +14,11 @@ function init() {
 	if(theme == "dark"){
 		optDark.setAttribute("selected", "selected")
 		optLight.removeAttribute("selected")
+		updateTheme(theme)
 	} else if(theme == "light"){
 		optLight.setAttribute("selected", "selected")
 		optDark.removeAttribute("selected")
+		updateTheme(theme)
 	}
 
 	if(display)
@@ -30,4 +32,9 @@ function savePref(e) {
 
 	localStorage.setItem('theme', themeSelect.value)
 	localStorage.setItem("display", display)
+	updateTheme(themeSelect.value)
+}
+
+function updateTheme(theme) {
+	document.body.setAttribute("data-bs-theme", theme)
 }
