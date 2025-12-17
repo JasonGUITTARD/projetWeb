@@ -4,8 +4,8 @@ let preferenceButton = document.getElementById("savePref").addEventListener("cli
 let themeSelect = document.getElementById("theme")
 let optDark = document.getElementById("optDark")
 let optLight = document.getElementById("optLight")
-let tableRadio = document.getElementById("tableRadio")
-let gridRadio = document.getElementById("gridRadio")
+let tableRadio = document.getElementById("table")
+let gridRadio = document.getElementById("grid")
 
 function init() {
 	let theme = localStorage.getItem("theme")
@@ -19,13 +19,8 @@ function init() {
 		optDark.removeAttribute("selected")
 	}
 
-	if(display == "table") {
-		tableRadio.checked = true
-		gridRadio.checked = false
-	} else if(display == "grid") {
-		tableRadio.checked = false
-		gridRadio.checked = true
-	}
+	if(display)
+		document.getElementById(display).checked = true
 }
 
 function savePref(e) {

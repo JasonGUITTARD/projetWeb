@@ -6,10 +6,10 @@
 			"name": "Jason",
 			"city": "Dijon",
 			"story": [
-				"Joue en pré-nationnal au Volley-ball",
+				"A joué en pré-nationnal au Volley-ball",
 				"Manager d'équipes e-sport sur le jeu VALORANT"
 			],
-			"avatar": "assets/Images/Avatar/jasonGUITTARD.png",
+			"avatar": "assets/Images/Avatar/jasonGUITTARD.jpg",
 			"coord": {
 				"latitude": 47.31040954589844,
 				"longitude": 5.047903060913086 
@@ -21,7 +21,7 @@
 			"name": "Bryan",
 			"city": "Epinal",
 			"story": [
-				"A obetenu son permis il y'a 2 ans"
+				"A obtenu son permis il y'a 2 ans"
 			]
 		},
 		{
@@ -33,6 +33,13 @@
 				"Rêve de devenir commercial automobile"
 			],
 			"avatar": "assets/Images/Avatar/avatar.png"
+		},
+		{
+			"id": 4,
+			"lastname": "GUITTARD",
+			"name": "Katherina",
+			"city": "Dijon",
+			"story": []
 		}
 	]
 }

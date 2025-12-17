@@ -35,7 +35,14 @@
 			</nav>
 		</header>
 		<main class="mt-4 row">
-			<div class="col-sm-7">
+			<div class="text-end justify-content-end pe-5 mb-4">
+				<label class="me-4">Type d'affichage</label>
+				<input type="radio" name="display" id="table" class="form-check-input" checked>
+				<label for="liste" class="pe-2 form-check-label">Liste</label>
+				<input type="radio" name="display" id="grid" class="form-check-input">
+				<label for="carte" class="form-check-label">Cartes</label>
+			</div>
+			<div class="col-sm-7" id="tableDisplay">
 				<h3>Liste des apprenants</h3>
 				<div class="table-height">
 					<table class="table table-striped table-responsive-sm border-top border-end border-start">
@@ -47,8 +54,8 @@
 								<th scope="col">Liens</th>
 							</tr>
 						</thead>
-						<tbody class="align-middle" id="apprenants">
-							<template id="templateApprenants">
+						<tbody class="align-middle" id="apprenantsTable">
+							<template id="templateListeApprenants">
 								<tr>
 									<td scope="row" lastname></td>
 									<td name></td>
@@ -59,14 +66,18 @@
 						</tbody>
 					</table>
 				</div>
-				
 			</div>
-			<div class="col text-center">
-				<label class="me-4">Type d'affichage</label>
-				<input type="radio" name="display" id="liste" class="form-check-input" checked>
-				<label for="liste" class="pe-2 form-check-label">Liste</label>
-				<input type="radio" name="display" id="carte" class="form-check-input">
-				<label for="carte" class="form-check-label">Cartes</label>
+			<div class="row row-cols-sm-6 gap-5" id="gridDisplay">
+				<template id="templateGridApprenants">
+					<div class="card col">
+						<img src="assets/Images/Avatar/avatar.png" alt="" class="card-img-top rounded-circle img-fluid">
+						<div class="card-body">
+							<h5 class="card-title"></h5>
+							<p class="card-text"></p>
+							<a href="" class="btn btn-primary">Détails</a>
+						</div>
+					</div>
+				</template>
 			</div>
 		</main>
 		<script src="scriptIndex.js"></script>
