@@ -1,17 +1,18 @@
 <!DOCTYPE html>
-	<html lang="fr">
+	<html lang="fr" data-bs-theme="light">
 	<head>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="description" content="Page d'acceuil affichant la liste des apprenant de l'école ENI sur la promo EDWM2511FT.">
 		<title>PromoENI</title>
-		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="css/style.css">
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 		<link rel="preload" fetchpriority="high" as="image" href="assets/Images/logo.webp" type="image/webp">
 		<link rel="preload" fetchpriority="high" as="image" href="assets/Images/Avatar/avatar.webp" type="image/webp">
 		<link rel="preload" fetchpriority="high" as="image" href="assets/Images/Avatar/jasonGUITTARD.webp" type="image/webp">
 	</head>
-	<body class="container-fluid" data-bs-theme="light">
+	<body class="container-fluid">
+		<canvas id="particles-bg" aria-hidden="true"></canvas>
 		<header>
 			<nav class="navbar navbar-expand-lg">
 				<div class="container-fluid">
@@ -21,24 +22,24 @@
 					<div class="collapse navbar-collapse" id="navbarToggler">
 						<ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
 							<li class="nav-item">
-								<a href="index.html" class="btn btn-primary btn-lg" role="button">Acceuil</a>
+								<a href="index.html" class="btn btn-gold btn-lg" role="button">Acceuil</a>
 							</li>
 							<li class="nav-item">
-								<a href="preferences.html" class="btn btn-primary btn-lg" role="button">Préférences</a>
+								<a href="pages/preferences.html" class="btn btn-cyan btn-lg" role="button">Préférences</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="btn btn-primary btn-lg" role="button">Carte</a>
+								<a href="#" class="btn btn-cyan btn-lg" role="button">Carte</a>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="btn btn-primary btn-lg" role="button">Informations</a>
+								<a href="pages/informations.html" class="btn btn-cyan btn-lg" role="button">Informations</a>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</nav>
 		</header>
-		<main class="mt-4 row">
-			<div class="pe-5 mb-4">
+		<main class="mt-2 row">
+			<div class="pe-5 mb-4 glass-panel">
 				<div class="col-11 text-end">
 					<label class="me-4">Type d'affichage</label>
 					<input type="radio" name="display" id="table" class="form-check-input" checked>
@@ -47,8 +48,8 @@
 					<label for="grid" class="form-check-label">Cartes</label>
 				</div>
 			</div>
-			<div class="col-sm-7" id="tableDisplay">
-				<h3>Liste des apprenants</h3>
+			<div class="col-sm-7 glass-panel" id="tableDisplay">
+				<h3 class="text-gold">Liste des apprenants</h3>
 				<div class="table-height">
 					<table class="table table-striped table-responsive-sm border-top border-end border-start">
 						<thead>
@@ -72,7 +73,9 @@
 					</table>
 				</div>
 			</div>
-			<div class="row row-cols-lg-6 row-cols-sm-4 row-cols-2 gap-5 justify-content-center" id="gridDisplay">
+			<div class="glass-panel" id="gridDisplayDiv">
+				<h3 class="text-gold text-center">Liste des apprenants</h3>
+				<div class="row row-cols-lg-6 row-cols-sm-4 row-cols-2 gap-5 ms-0 justify-content-center " id="gridDisplay"></div>
 				<template id="templateGridApprenants">
 					<div class="card col-10">
 						<img src="assets/Images/Avatar/avatar.webp" alt="" class="card-img-top rounded-circle img-fluid">
@@ -86,6 +89,7 @@
 			</div>
 		</main>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-		<script src="scriptIndex.js"></script>
+		<script src="js/scriptIndex.js"></script>
+		<script src="js/background.js"></script>
 	</body>
 </html>

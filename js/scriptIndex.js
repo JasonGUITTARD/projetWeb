@@ -1,6 +1,7 @@
 window.onload = init
 
 let gridDiv = document.getElementById('gridDisplay')
+let gridDisplayDiv = document.getElementById("gridDisplayDiv")
 let tableDiv = document.getElementById('tableDisplay')
 let apprenantTable = document.getElementById("apprenantsTable")
 
@@ -14,9 +15,9 @@ function init() {
 	if(display) {
 		document.getElementById(display).checked = true
 		if(display == "table") {
-			fetch('promo.json').then(response => response.json()).then(data => updateDisplayTable(data.apprenants))
+			fetch('../json/promo.json').then(response => response.json()).then(data => updateDisplayTable(data.apprenants))
 		} else if (display == "grid") {
-			fetch('promo.json').then(response => response.json()).then(data => updateDisplayGrid(data.apprenants))
+			fetch('../json/promo.json').then(response => response.json()).then(data => updateDisplayGrid(data.apprenants))
 		}
 	}
 
@@ -62,16 +63,16 @@ function updateGrid(data) {
 }
 
 function updateDisplayGrid() {
-	gridDiv.classList.remove('d-none')
+	gridDisplayDiv.classList.remove('d-none')
 	tableDiv.classList.add('d-none')
-	fetch('promo.json').then(response => response.json()).then(data => updateGrid(data.apprenants))
+	fetch('../json/promo.json').then(response => response.json()).then(data => updateGrid(data.apprenants))
 	resetDisplay(apprenantTable)
 }
 
 function updateDisplayTable() {
-	gridDiv.classList.add('d-none')
+	gridDisplayDiv.classList.add('d-none')
 	tableDiv.classList.remove('d-none')
-	fetch('promo.json').then(response => response.json()).then(data => updateTable(data.apprenants))
+	fetch('../json/promo.json').then(response => response.json()).then(data => updateTable(data.apprenants))
 	resetDisplay(gridDiv)
 }
 
@@ -84,5 +85,5 @@ function resetDisplay(element) {
 }
 
 function updateTheme(theme) {
-	document.body.setAttribute("data-bs-theme", theme)
+	document.documentElement.setAttribute("data-bs-theme", theme)
 }

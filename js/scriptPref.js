@@ -36,5 +36,5 @@ function savePref(e) {
 }
 
 function updateTheme(theme) {
-	document.body.setAttribute("data-bs-theme", theme)
+	document.documentElement.setAttribute("data-bs-theme", theme)
 }
