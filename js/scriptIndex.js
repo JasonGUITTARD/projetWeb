@@ -78,9 +78,16 @@ function updateDisplayTable() {
 
 function resetDisplay(element) {
 	let childrenLength = element.children.length;
-	while(childrenLength > 1) {
-		element.removeChild(element.lastElementChild)
-		childrenLength = element.children.length;
+	if(element.id == "gridDisplay") {
+		while(childrenLength > 0) {
+			element.removeChild(element.lastElementChild)
+			childrenLength = element.children.length;
+		}
+	} else {
+		while(childrenLength > 1) {
+			element.removeChild(element.lastElementChild)
+			childrenLength = element.children.length;
+		}
 	}
 }
 
