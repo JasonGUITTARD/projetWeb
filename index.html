@@ -66,7 +66,7 @@
 									<td scope="row" lastname></td>
 									<td name></td>
 									<td city></td>
-									<td><a href="#" class="btn btn-link" role="button">Détails</a></td>
+									<td detail><a href="#" class="btn btn-link" role="button">Détails</a></td>
 								</tr>
 							</template>
 						</tbody>
@@ -82,12 +82,32 @@
 						<div class="card-body pb-3 text-center">
 							<h5 class="card-title"></h5>
 							<p class="card-text text-wrap"></p>
-							<a href="" class="btn btn-primary ">Détails</a>
+							<a class="btn btn-primary" detail>Détails</a>
 						</div>
 					</div>
 				</template>
 			</div>
 		</main>
+		<div id="detailModal" class="modal fade" tabindex="-1" aria-labelledby="detailModalLabel" aria-hidden="true"">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<img class="img-fluid rounded col-3 me-4" avatar>
+						<div class="">
+							<h3 lastname></h3>
+							<h3 name></h3>
+							<h3 city></h3>
+						</div>
+						<button type="button" class="btn-close align-self-start" data-bs-dismiss="modal" aria-label="close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="mb-2">Liste des anecdotes: </div>
+						<div class="border border-2 border-black px-2" story></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 		<script src="js/scriptIndex.js"></script>
 		<script src="js/background.js"></script>

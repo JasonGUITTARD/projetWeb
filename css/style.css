@@ -240,10 +240,18 @@ body > * {
 	.resize-select-sm {
 		width: auto !important
 	}
+
+	.resize-modal-sm {
+		width: 50% !important;
+	}
 }
 
 @media screen and (max-width: 575px) {
 	.resize-select-sm {
 		width: 50% !important
+	}
+
+	.resize-modal-sm {
+		width: 75% !important;
 	}
 }
