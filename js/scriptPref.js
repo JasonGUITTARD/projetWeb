@@ -23,6 +23,8 @@ function init() {
 
 	if(display)
 		document.getElementById(display).checked = true
+
+	fetch('../json/promo.json').then(response => response.json()).then(data => updateInformations(data))
 }
 
 function savePref(e) {
@@ -37,4 +39,8 @@ function savePref(e) {
 
 function updateTheme(theme) {
 	document.documentElement.setAttribute("data-bs-theme", theme)
+}
+
+function updateInformations(data) {
+	document.querySelector("h1[nomPromo]").innerText = data.nomPromo
 }

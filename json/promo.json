@@ -1,4 +1,8 @@
 {
+	"nomPromo": "Promo EDWM2511FT",
+	"descriptionFormation": "Le développeur web et web mobile réalise des sites web ou applications mobiles sécurisés destinées à des salariés. Il les développe avec des langages adaptés aux technologies dédiées à l'architecture web ou web mobile, côté navigateur et côté serveur.",
+	"debutFormation": "24/11/2025",
+	"finFormation": "01/05/2025",
 	"apprenants": [
 		{
 			"id": 1,

@@ -16,9 +16,15 @@ function init() {
 	if(display) {
 		document.getElementById(display).checked = true
 		if(display == "table") {
-			fetch('../json/promo.json').then(response => response.json()).then(data => updateDisplayTable(data.apprenants))
+			fetch('../json/promo.json').then(response => response.json()).then(data => {
+				updateDisplayTable(data.apprenants)
+				updateInformations(data)
+			})
 		} else if (display == "grid") {
-			fetch('../json/promo.json').then(response => response.json()).then(data => updateDisplayGrid(data.apprenants))
+			fetch('../json/promo.json').then(response => response.json()).then(data => {
+				updateDisplayGrid(data.apprenants)
+				updateInformations(data)
+			})
 		}
 	}
 
@@ -145,4 +151,8 @@ function resetDisplay(element) {
 
 function updateTheme(theme) {
 	document.documentElement.setAttribute("data-bs-theme", theme)
+}
+
+function updateInformations(data) {
+	document.querySelector("h1[nomPromo]").innerText = data.nomPromo
 }

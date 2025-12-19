@@ -17,7 +17,7 @@ function init() {
 	if(theme)
 		updateTheme(theme)
 
-	fetch("../json/promo.json").then(response => response.json()).then(data => updateNumberStudent(data.apprenants))
+	fetch("../json/promo.json").then(response => response.json()).then(data => updateInformations(data))
 }
 
 function updateTheme(theme) {
@@ -37,4 +37,8 @@ function setMarkers(data) {
 			marker.addTo(map)
 		}
 	});
+}
+
+function updateInformations(data) {
+	document.querySelector("h1[nomPromo]").innerText = data.nomPromo
 }
