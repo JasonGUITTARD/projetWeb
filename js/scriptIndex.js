@@ -64,9 +64,9 @@ async function setInformation(e) {
 	let data = await fetch('../json/promo.json').then(response => response.json())
 	let apprenantData = data.apprenants.find(element => element.id === parseInt(id))
 
-	lastnameElement.innerText = apprenantData.lastname ? apprenantData.lastname : "Non renseigné"
-	nameElement.innerText = apprenantData.name ? apprenantData.name : "Non renseigné"
-	cityElement.innerText = apprenantData.city ? apprenantData.city : "Non renseigné"
+	lastnameElement.innerText = apprenantData.lastname ? `Nom: ` + apprenantData.lastname : "Nom: Non renseigné"
+	nameElement.innerText = apprenantData.name ? `Prénom: ` + apprenantData.name : "Prénom: Non renseigné"
+	cityElement.innerText = apprenantData.city ? `Ville: ` + apprenantData.city : "Ville: Non renseigné"
 
 	storydiv.innerHTML = ""
 	avatarElement.setAttribute("src", "assets/Images/Avatar/avatar.webp")
