@@ -7,6 +7,8 @@ let optLight = document.getElementById("optLight")
 let tableRadio = document.getElementById("table")
 let gridRadio = document.getElementById("grid")
 
+const toastLive = document.getElementById('notificationToast')
+
 function init() {
 	let theme = localStorage.getItem("theme")
 	let display = localStorage.getItem("display")
@@ -35,6 +37,8 @@ function savePref(e) {
 	localStorage.setItem('theme', themeSelect.value)
 	localStorage.setItem("display", display)
 	updateTheme(themeSelect.value)
+
+	bootstrap.Toast.getOrCreateInstance(toastLive).show()
 }
 
 function updateTheme(theme) {
