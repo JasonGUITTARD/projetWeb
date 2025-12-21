@@ -85,8 +85,11 @@ async function setInformation(e) {
 		storydiv.appendChild(paragraph)
 	}
 
-	if(apprenantData.avatar && apprenantData.avatar.length > 0)
+	if(apprenantData.avatar && apprenantData.avatar.length > 0) {
 		avatarElement.setAttribute("src", apprenantData.avatar)
+		avatarElement.setAttribute("alt", `Photo représentant ${apprenantData.lastname} ${apprenantData.name}`)
+	}
+		
 }
 
 function updateGrid(data) {
