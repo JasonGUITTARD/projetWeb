@@ -7,8 +7,6 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map)
 
-//let marker = L.marker([51.508, -0.11]).bindPopup("<b>Hello world!</b><br>I am a popup.").addTo(map)
-
 fetch('../json/promo.json').then(response => response.json()).then(data => setMarkers(data.apprenants))
 
 function init() {
@@ -32,9 +30,7 @@ function setMarkers(data) {
 			let student = `${element.lastname} ${element.name}`
 
 			let marker = L.marker([lat, lon])
-			marker.bindPopup(student)
-
-			marker.addTo(map)
+			marker.bindPopup(student).addTo(map)
 		}
 	});
 }

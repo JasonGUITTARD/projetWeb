@@ -29,7 +29,6 @@ function init() {
 	}
 
 	updateTheme(theme)
-	
 }
 
 function updateTable(data) {
@@ -89,7 +88,6 @@ async function setInformation(e) {
 		avatarElement.setAttribute("src", apprenantData.avatar)
 		avatarElement.setAttribute("alt", `Photo représentant ${apprenantData.lastname} ${apprenantData.name}`)
 	}
-		
 }
 
 function updateGrid(data) {
