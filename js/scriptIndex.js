@@ -10,18 +10,18 @@ function init() {
 	document.getElementById("table").addEventListener('change', updateDisplayTable)
 	document.getElementById("grid").addEventListener('change', updateDisplayGrid)
 
-	let display = localStorage.getItem("display")
-	let theme = localStorage.getItem("theme")
+	let display = localStorage.getItem("display") || "table"
+	let theme = localStorage.getItem("theme") || "light"
 
 	if(display) {
 		document.getElementById(display).checked = true
 		if(display == "table") {
-			fetch('../json/promo.json').then(response => response.json()).then(data => {
+			fetch('./json/promo.json').then(response => response.json()).then(data => {
 				updateDisplayTable(data.apprenants)
 				updateInformations(data)
 			})
 		} else if (display == "grid") {
-			fetch('../json/promo.json').then(response => response.json()).then(data => {
+			fetch('./json/promo.json').then(response => response.json()).then(data => {
 				updateDisplayGrid(data.apprenants)
 				updateInformations(data)
 			})

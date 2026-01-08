@@ -10,8 +10,8 @@ let gridRadio = document.getElementById("grid")
 const toastLive = document.getElementById('notificationToast')
 
 function init() {
-	let theme = localStorage.getItem("theme")
-	let display = localStorage.getItem("display")
+	let theme = localStorage.getItem("theme") || "light"
+	let display = localStorage.getItem("display") || "table"
 
 	if(theme == "dark"){
 		optDark.setAttribute("selected", "selected")

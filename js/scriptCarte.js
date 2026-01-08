@@ -10,7 +10,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 fetch('../json/promo.json').then(response => response.json()).then(data => setMarkers(data.apprenants))
 
 function init() {
-	let theme = localStorage.getItem("theme")
+	let theme = localStorage.getItem("theme") || "light"
 
 	if(theme)
 		updateTheme(theme)

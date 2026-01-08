@@ -1,7 +1,7 @@
 window.onload = init
 
 function init() {
-	let theme = localStorage.getItem("theme")
+	let theme = localStorage.getItem("theme") || "light"
 
 	if(theme)
 		updateTheme(theme)
