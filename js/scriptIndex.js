@@ -16,12 +16,12 @@ function init() {
 	if(display) {
 		document.getElementById(display).checked = true
 		if(display == "table") {
-			fetch('./json/promo.json').then(response => response.json()).then(data => {
+			fetch('json/promo.json').then(response => response.json()).then(data => {
 				updateDisplayTable(data.apprenants)
 				updateInformations(data)
 			})
 		} else if (display == "grid") {
-			fetch('./json/promo.json').then(response => response.json()).then(data => {
+			fetch('json/promo.json').then(response => response.json()).then(data => {
 				updateDisplayGrid(data.apprenants)
 				updateInformations(data)
 			})
@@ -60,7 +60,7 @@ async function setInformation(e) {
 	let storydiv = document.querySelector("div[story]")
 	let avatarElement = document.querySelector("img[avatar]")
 
-	let data = await fetch('../json/promo.json').then(response => response.json())
+	let data = await fetch('json/promo.json').then(response => response.json())
 	let apprenantData = data.apprenants.find(element => element.id === parseInt(id))
 
 	lastnameElement.innerText = apprenantData.lastname ? `Nom: ` + apprenantData.lastname : "Nom: Non renseigné"
@@ -124,14 +124,14 @@ function updateGrid(data) {
 function updateDisplayGrid() {
 	gridDisplayDiv.classList.remove('d-none')
 	tableDiv.classList.add('d-none')
-	fetch('../json/promo.json').then(response => response.json()).then(data => updateGrid(data.apprenants))
+	fetch('json/promo.json').then(response => response.json()).then(data => updateGrid(data.apprenants))
 	resetDisplay(apprenantTable)
 }
 
 function updateDisplayTable() {
 	gridDisplayDiv.classList.add('d-none')
 	tableDiv.classList.remove('d-none')
-	fetch('../json/promo.json').then(response => response.json()).then(data => updateTable(data.apprenants))
+	fetch('json/promo.json').then(response => response.json()).then(data => updateTable(data.apprenants))
 	resetDisplay(gridDiv)
 }
 
