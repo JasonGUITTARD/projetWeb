@@ -6,7 +6,7 @@ function init() {
 	if(theme)
 		updateTheme(theme)
 
-	fetch("/json/promo.json").then(response => response.json()).then(data => {
+	fetch("../json/promo.json").then(response => response.json()).then(data => {
 		updateNumberStudent(data.apprenants)
 		updateInformations(data)
 	})

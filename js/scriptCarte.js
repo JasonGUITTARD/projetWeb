@@ -7,7 +7,7 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 	attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map)
 
-fetch('/json/promo.json').then(response => response.json()).then(data => setMarkers(data.apprenants))
+fetch('../json/promo.json').then(response => response.json()).then(data => setMarkers(data.apprenants))
 
 function init() {
 	let theme = localStorage.getItem("theme") || "light"
@@ -15,7 +15,7 @@ function init() {
 	if(theme)
 		updateTheme(theme)
 
-	fetch("/json/promo.json").then(response => response.json()).then(data => updateInformations(data))
+	fetch("../json/promo.json").then(response => response.json()).then(data => updateInformations(data))
 }
 
 function updateTheme(theme) {

@@ -26,7 +26,7 @@ function init() {
 	if(display)
 		document.getElementById(display).checked = true
 
-	fetch('/json/promo.json').then(response => response.json()).then(data => updateInformations(data))
+	fetch('../json/promo.json').then(response => response.json()).then(data => updateInformations(data))
 }
 
 function savePref(e) {
